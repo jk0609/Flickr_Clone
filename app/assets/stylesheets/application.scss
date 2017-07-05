@@ -13,3 +13,13 @@
  *= require_tree .
  *= require_self
  */
+ @import "bootstrap-sprockets";
+ @import "bootstrap";
+.card{
+  display: inline-block;
+  margin: 0px 5px 0px 5px;
+  border: 1px solid;
+  .img-edit {
+    height: inherit;
+  }
+}

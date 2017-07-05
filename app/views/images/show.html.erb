@@ -1,0 +1,15 @@
+<%= image_tag @image.image_path.url(:large) %>
+
+<div class="">
+  <% @image.comments.each do |comment| %>
+    <div>
+      <%= comment.content %>
+    </div>
+  <% end %>
+</div>
+
+<h3>Add Comment</h3>
+<%= form_for [@image, @comment], url:image_comments_path(@image, @comment), html: { multipart: true } do |form| %>
+  <%= form.text_field :content %>
+  <%= form.submit %>
+<% end %>

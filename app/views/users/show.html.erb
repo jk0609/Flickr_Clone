@@ -1,1 +1,14 @@
 <h1>Show</h1>
+<h2><%= current_user.username %></h2>
+<%= link_to 'Add Image', new_user_image_path(current_user), :class=> "btn btn-primary" %>
+<br><br>
+<div class="row">
+  <% current_user.images.each do |image| %>
+    <div class="card col-md-4">
+      <%=  link_to image_tag(image.image_path.url(:medium)), user_image_path(current_user, image)%>
+      <div class="card-block">
+        <p class="card-text">of a card.</p>
+      </div>
+    </div>
+  <% end %>
+</div>
