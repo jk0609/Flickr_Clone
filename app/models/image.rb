@@ -4,5 +4,9 @@ class Image < ApplicationRecord
   validates_attachment_content_type :image_path, :content_type => /\Aimage\/.*\Z/
 
   belongs_to :user
+  has_many :imagetags
   has_many :comments
+  has_many :tags, through: :imagetags
+
+
 end
