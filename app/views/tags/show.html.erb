@@ -1,0 +1,11 @@
+<h1>Tag Show</h1>
+<div class="row">
+  <% @tag.images.each do |image| %>
+    <div class="card col-md-4">
+      <%=  link_to image_tag(image.image_path.url(:medium)), user_image_path(image.user, image)%>
+      <div class="card-block">
+        <p class="card-text">of a card.</p>
+      </div>
+    </div>
+  <% end %>
+</div>

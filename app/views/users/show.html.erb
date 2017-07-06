@@ -1,7 +1,13 @@
 <h1>Your Photos</h1>
 <h2><%= @user.username %></h2>
 
-<%= link_to 'Add Image', new_user_image_path(@user), :class=> "btn btn-primary" %>
+<% if !is_admin? %>
+  <%= link_to 'Add Image', new_user_image_path(@user), :class=> "btn btn-primary" %>
+<% elsif is_admin? %>
+  <%= link_to 'Delete User', user_path(@user), :data => {:confirm => "Are you sure?", :method => "delete"}, :class=> "btn btn-danger" %>
+<% end %>
+
+
 <br><br>
 <div class="row">
   <% @user.images.each do |image| %>
