@@ -6,6 +6,8 @@
 
 # Ignore bundler config.
 /.bundle
+/public/system/images
+/spec/asset_specs
 
 # Ignore all logfiles and tempfiles.
 /log/*
