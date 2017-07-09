@@ -1,24 +1,44 @@
-# README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
 
-Things you may want to cover:
+# Flickr Clone
 
-* Ruby version
+#### By Jonathon Kang
 
-* System dependencies
+## Description
 
-* Configuration
+Practice with Ruby/Rails with the Devise gem to create a clone of the image storing site Flickr. The site uses a PostgreSQL relational database with Devise to manage users, images, comments and tags. 
 
-* Database creation
+## Prerequisites
+* Rails
+* Devise gem
+* PostgreSQL
 
-* Database initialization
+## Setup/Installation Requirements
+1. Clone the directory to your local machine and navigate to project root directory.
+2. Run $ bundle to install necessary gems.
+3. Run $ rake db:create and $ rake db:migrate to initialize the database.
+4. Run $ rails server to start the app and navigate toe localhost:3000 in a browser.
+5. Create an account to navigate user features or sign into 'admin@admin.com'///123456 to navigate admin features.
 
-* How to run the test suite
+## Technologies Used
+* HTML/CSS
+* Bootstrap
+* Ruby
+* Rails
+* PostgreSQL
 
-* Services (job queues, cache servers, search engines, etc.)
+## Testing
+1. Run $ bundle to install rspec gem.
+2. Run $ rspec to run integration tests.
 
-* Deployment instructions
+## Known Bugs
+* Spec tests accounting for deleting products is failing, capybara won't select the correct option from the alert confirmation.
 
-* ...
+## Future Updates
+* Add categories navigation to drop down in the navbar.
+* Convert categories and products into a many-to-many association.
+* Add additional user functionality, sales, favorites list, etc.
+* General styling
+
+### License
+MIT
